@@ -3,8 +3,7 @@ import Head from 'next/head'
 import Footer from '../footer'
 import Navbar from '../navbar'
 
-const Main = ({ children, router, api }: any) => {
-  console.log(api)
+const Main = ({ children, router }: any) => {
   return (
     <Box>
       <Head>

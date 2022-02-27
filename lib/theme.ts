@@ -6,7 +6,7 @@ const styles = {
   global: (props: Dict | StyleFunctionProps) => ({
     body: {
       color: mode('white', 'black')(props),
-      bg: mode('#f0e7db', '#202023')(props)
+      bg: mode('#f0e7db', 'white')(props)
     }
   })
 }

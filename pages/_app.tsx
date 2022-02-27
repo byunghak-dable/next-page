@@ -1,6 +1,6 @@
 import Chakra from '../components/chakra'
-import Layout from '../components/layouts/main'
 import type { AppProps } from 'next/app'
+import Layout from '../components/layouts/main'
 
 const App = ({ Component, pageProps, router }: AppProps) => {
   return (
