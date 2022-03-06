@@ -1,4 +1,4 @@
-import { Container, Box } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import Layout from '../components/layouts/intro'
 
 const Home = () => {
