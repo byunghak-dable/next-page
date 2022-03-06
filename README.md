@@ -1,2 +1,1 @@
 # weed-website
-my website
