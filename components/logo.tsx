@@ -61,16 +61,16 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const theme = useColorModeValue('gray.800', 'black')
+  const theme = useColorModeValue('gray.800', 'white')
   return (
     <Link href="/" passHref={true} scroll={false}>
       <a>
-        <LogoBox>
-          <Weed theme={theme} />
-          <Text color={theme} fontWeight="bold" ml={1}>
-            Byunghak Noh
-          </Text>
-        </LogoBox>
+      <LogoBox style={{ cursor: 'pointer' }}>
+        <Weed theme={theme} />
+        <Text color={theme} fontWeight="bold" ml={1}>
+          Byunghak Noh
+        </Text>
+      </LogoBox>
       </a>
     </Link>
   )
