@@ -5,8 +5,8 @@ import { Dict } from '@chakra-ui/utils'
 const styles = {
   global: (props: Dict | StyleFunctionProps) => ({
     body: {
-      color: mode('white', 'black')(props),
-      bg: mode('#f0e7db', 'white')(props)
+      // color: mode('black', 'white')(props),
+      bg: mode('#f0e7db', '#202023')(props)
     }
   })
 }
