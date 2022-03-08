@@ -1,13 +1,4 @@
-import {
-  Stack,
-  VStack,
-  Box,
-  Center,
-  Flex,
-  Heading,
-  Text,
-  Avatar
-} from '@chakra-ui/react'
+import { Box, Center, Flex, Heading, Text, Avatar } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 
 const Home = () => {
@@ -23,23 +14,41 @@ const Home = () => {
         />
         <Avatar w="95" h="95" src="" />
       </Flex>
+      <Card title="Info">
+        <Info title="1993" desc="Born in Korea." />
+        <Info
+          title="2019"
+          desc="Complete Construction System Engineering at Ajou University."
+        />
+      </Card>
       <Card title="work">
         <Text>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera.
+          I&apos;m full-stack developer that He has a knack for all things
+          launching products, from planning and designing all the way to solving
+          real-life problems with code. When not online, he loves hanging out
+          with his camera.
         </Text>
       </Card>
     </Layout>
   )
 }
 
+const Info = ({ title, desc }: { title: String; desc: String }) => {
+  return (
+    <Flex align="baseline">
+      <Heading h="100%" mr="8" size="sm">
+        {title}
+      </Heading>
+      <Text>{desc}</Text>
+    </Flex>
+  )
+}
 const Post = ({ title, desc }: { title: String; desc: String }) => {
   return (
     <Box flex="1" h="100%">
-      <Heading mb="2">{title}</Heading>
+      <Heading mb="2" size="sm">
+        {title}
+      </Heading>
       <Text>{desc}</Text>
     </Box>
   )
