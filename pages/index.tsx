@@ -4,6 +4,7 @@ import Layout from '../components/layouts/article'
 const Home = () => {
   return (
     <Layout>
+      <Box h="300"></Box>
       <Center bg="gray.600" px="4" py="2" borderRadius="5" fontWeight="bold">
         Hello, I&apos;m a full-stack developer
       </Center>
@@ -20,6 +21,18 @@ const Home = () => {
           title="2019"
           desc="Complete Construction System Engineering at Ajou University."
         />
+        <Info
+          title="2020"
+          desc="Participate in FaceLab project as backend & face compositing developer."
+        ></Info>
+        <Info
+          title="2021"
+          desc="Participate in LolLab as full-stack developer."
+        ></Info>
+        <Info
+          title="2022"
+          desc="Worked at MaidInReal as a backend devleoper."
+        ></Info>
       </Card>
       <Card title="work">
         <Text>
@@ -33,6 +46,7 @@ const Home = () => {
   )
 }
 
+// bio info
 const Info = ({ title, desc }: { title: String; desc: String }) => {
   return (
     <Flex align="baseline">
@@ -43,6 +57,8 @@ const Info = ({ title, desc }: { title: String; desc: String }) => {
     </Flex>
   )
 }
+
+// title - desc post
 const Post = ({ title, desc }: { title: String; desc: String }) => {
   return (
     <Box flex="1" h="100%">
@@ -54,16 +70,16 @@ const Post = ({ title, desc }: { title: String; desc: String }) => {
   )
 }
 
+// paragraph
 const Card = ({ title, children }: any) => {
-  console.log(children)
   return (
-    <Box>
+    <Box mt="5">
       <Heading
         w="min-content"
         size="md"
+        mb="3"
         pt="1"
         pb="1"
-        mb="2"
         borderBottomWidth="5px"
         borderColor="gray.600"
       >

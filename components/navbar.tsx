@@ -31,7 +31,7 @@ const LinkItem = ({ children, href, path, target, ...props }: any) => {
 
 const Navbar = ({ path }: any) => {
   return (
-    <Box>
+    <Box p="3">
       <Flex>
         <Center mr={3}>
           <Heading>
