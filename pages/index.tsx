@@ -13,7 +13,7 @@ const Home = () => {
           title="Byunghak Noh"
           desc="Digital Craftman ( Developer / Artist )"
         />
-        <Avatar w="95" h="95" src="" />
+        <Avatar w="95" h="95" />
       </Flex>
       <Card title="Info">
         <Info title="1993" desc="Born in Korea." />
