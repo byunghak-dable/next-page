@@ -1,53 +1,17 @@
-import { Box, Center, Flex, Heading, Text, Avatar } from '@chakra-ui/react'
+import {
+  Box,
+  Center,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  Text,
+  Avatar
+} from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 
-const Home = () => {
-  return (
-    <Layout>
-      <Box h="300"></Box>
-      <Center bg="gray.600" px="4" py="2" borderRadius="5" fontWeight="bold">
-        Hello, I&apos;m a full-stack developer
-      </Center>
-      <Flex justify="center" align="center" py="5" wrap="wrap" gap="5">
-        <Post
-          title="Byunghak Noh"
-          desc="Digital Craftman ( Developer / Artist )"
-        />
-        <Avatar w="95" h="95" />
-      </Flex>
-      <Card title="Info">
-        <Info title="1993" desc="Born in Korea." />
-        <Info
-          title="2019"
-          desc="Complete Construction System Engineering at Ajou University."
-        />
-        <Info
-          title="2020"
-          desc="Participate in FaceLab project as backend & face compositing developer."
-        ></Info>
-        <Info
-          title="2021"
-          desc="Participate in LolLab as full-stack developer."
-        ></Info>
-        <Info
-          title="2022"
-          desc="Worked at MaidInReal as a backend devleoper."
-        ></Info>
-      </Card>
-      <Card title="work">
-        <Text>
-          I&apos;m full-stack developer that He has a knack for all things
-          launching products, from planning and designing all the way to solving
-          real-life problems with code. When not online, he loves hanging out
-          with his camera.
-        </Text>
-      </Card>
-    </Layout>
-  )
-}
-
 // bio info
-const Info = ({ title, desc }: { title: String; desc: String }) => {
+const Info = ({ title, desc }: { title: string; desc: string }) => {
   return (
     <Flex align="baseline">
       <Heading h="100%" mr="8" size="sm">
@@ -59,7 +23,7 @@ const Info = ({ title, desc }: { title: String; desc: String }) => {
 }
 
 // title - desc post
-const Post = ({ title, desc }: { title: String; desc: String }) => {
+const Post = ({ title, desc }: { title: string; desc: string }) => {
   return (
     <Box flex="1" h="100%">
       <Heading mb="2" size="sm">
@@ -87,6 +51,64 @@ const Card = ({ title, children }: any) => {
       </Heading>
       {children}
     </Box>
+  )
+}
+
+const Home = () => {
+  const projectVideos = [
+    { idx: 1, url: '' },
+    { idx: 2, url: '' }
+  ]
+  return (
+    <Layout>
+      <Box h="300"></Box>
+      <Center bg="gray.600" px="4" py="2" borderRadius="5" fontWeight="bold">
+        Hello, I&apos;m a full-stack developer
+      </Center>
+      <Flex justify="center" align="center" py="5" wrap="wrap" gap="5">
+        <Post
+          title="Byunghak Noh"
+          desc="Digital Craftman ( Developer / Artist )"
+        />
+        <Avatar w="95" h="95" />
+      </Flex>
+      {/* intro  */}
+      <Card title="intro">
+        <Text>
+          I&apos;m full-stack developer that He has a knack for all things
+          launching products, from planning and designing all the way to solving
+          real-life problems with code. When not online, he loves hanging out
+          with his camera.
+        </Text>
+      </Card>
+      <Card title="Info">
+        <Info title="1993" desc="Born in Korea." />
+        <Info
+          title="2019"
+          desc="Complete Construction System Engineering at Ajou University."
+        />
+        <Info
+          title="2020"
+          desc="Participate in FaceLab project as backend & face compositing developer."
+        ></Info>
+        <Info
+          title="2021"
+          desc="Participate in LolLab as full-stack developer."
+        ></Info>
+        <Info
+          title="2022"
+          desc="Worked at MaidInReal as a backend devleoper."
+        ></Info>
+      </Card>
+      {/* project card */}
+      <Card title="project">
+        <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+          {projectVideos.map(element => (
+            <GridItem key={element.idx}>test</GridItem>
+          ))}
+        </Grid>
+      </Card>
+    </Layout>
   )
 }
 
