@@ -72,7 +72,6 @@ const Home = () => {
         />
         <Avatar w="95" h="95" />
       </Flex>
-      {/* intro  */}
       <Card title="intro">
         <Text>
           I&apos;m full-stack developer that He has a knack for all things
