@@ -100,7 +100,6 @@ const Home = () => {
           desc="Worked at MaidInReal as a backend devleoper."
         ></Info>
       </Card>
-      {/* project card */}
       <Card title="project">
         <Grid templateColumns="repeat(2, 1fr)" gap={6}>
           {projectVideos.map(element => (
