@@ -1,13 +1,4 @@
-import {
-  Box,
-  Center,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Text,
-  Avatar
-} from '@chakra-ui/react'
+import { Box, Center, Flex, Heading, Text, Avatar } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 
 // bio info
@@ -55,10 +46,6 @@ const Card = ({ title, children }: any) => {
 }
 
 const Home = () => {
-  const projectVideos = [
-    { idx: 1, url: '' },
-    { idx: 2, url: '' }
-  ]
   return (
     <Layout>
       <Box h="300"></Box>
@@ -98,13 +85,6 @@ const Home = () => {
           title="2022"
           desc="Worked at MaidInReal as a backend devleoper."
         ></Info>
-      </Card>
-      <Card title="project">
-        <Grid templateColumns="repeat(2, 1fr)" gap={6}>
-          {projectVideos.map(element => (
-            <GridItem key={element.idx}>test</GridItem>
-          ))}
-        </Grid>
       </Card>
     </Layout>
   )
